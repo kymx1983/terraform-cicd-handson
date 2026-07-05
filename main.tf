@@ -119,6 +119,7 @@ resource "aws_instance" "web" {
   vpc_security_group_ids = [aws_security_group.ec2.id]
 
   tags = {
-    Name = "${var.prefix}-ec2"
+    Name        = "${var.prefix}-ec2"
+    Environment = "test"
   }
 }
